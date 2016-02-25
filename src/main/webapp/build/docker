@@ -1,0 +1,15 @@
+docker run -d -p 5000:5000 --restart=always --name registry \
+  -e SETTINGS_FLAVOR=s3 \
+  -e AWS_BUCKET=acme-docker \
+  -e STORAGE_PATH=/registry \
+  -e AWS_KEY=AKIAHSHB43HS3J92MXZ \
+  -e AWS_SECRET=xdDowwlK7TJajV1Y7EoOZrmuPEJlHYcNP2k4j49T \
+  -e SEARCH_BACKEND=sqlalchemy \
+  -v `pwd`/auth:/auth \
+  -e "REGISTRY_AUTH=htpasswd" \
+  -e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" \
+  -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \
+  -v `pwd`/certs:/certs \
+  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/1__.ihealthbaby.cn_bundle.crt \
+  -e REGISTRY_HTTP_TLS_KEY=/certs/2__.ihealthbaby.cn.key \
+  registry:2

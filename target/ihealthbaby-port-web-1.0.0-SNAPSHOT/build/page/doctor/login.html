@@ -1,0 +1,60 @@
+@@include('doctorHead.html', {"title": "登录"})
+<body class="login" style="height: auto;margin-top:-80px;padding: 0;">
+<div class="login_bg">
+    <div class="login_head"></div>
+</div>
+<div style="padding: 10px 15px;margin: 0 auto;text-align: center; box-sizing:border-box;">
+    <input type="text" name="txtName" class="input-control" style="width: 100%;margin: 0;box-sizing:border-box;border-radius: 5px;" value="赵田丽"/>
+    <div style="height: 15px;"></div>
+    <input type="text" name="txtName" class="input-control login_input" style="width:100%;margin: 0;;box-sizing:border-box;border-radius: 5px;"  placeholder="输入密码"/>
+
+    <div class="verification_div" style="display: none">
+        <div  style="box-sizing:border-box;">
+            <div style="width: 55%;float: left;">
+                <input type="text" class="input-control" style="width: 100%;margin: 0 auto;border-radius: 5px; text-align: left;padding-left: 15px; box-sizing: border-box;"  placeholder="输入验证码">
+            </div>
+            <div style="width: 35%;float: right;">
+                <div class="send_out">发送验证码</div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="send_err" style="text-align: left">验证码错误</div>
+    </div>
+</div>
+<a href="./order_list.html"><button class="btn-log">密码登录</button></a>
+<!--<a href="./order_list.html"><button class="btn-log">验证码登录</button></a>-->
+
+<div class="message_btn">使用短信验证码登录</div>
+
+
+<script src="../../page/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).on('click',".message_btn",function(){
+        $('.login_input').css("display","none");
+        $('.verification_div').css("display","block");
+        $(this).html("使用密码登录").addClass("message_login");
+    })
+    $(document).on('click','.message_login',function(){
+        $('.login_input').css("display","block");
+        $('.verification_div').css("display","none");
+        $(this).html("使用短信验证码登录").removeClass("message_login").addClass("message_btn");
+    })
+
+    $(".send_out").click(function(){
+        verify_phone();
+    });
+    var wait=60;
+    function verify_phone(){
+        if (wait == 0) {
+            $(".send_out").removeClass('send_miao').removeAttr("disabled").html("重新发送");
+            wait = 60;
+        } else {
+            $(".send_out").addClass('send_miao').attr("disabled", true).html(wait + '秒后重新获取');
+            wait--;
+            setTimeout(function() {
+                verify_phone();
+            },1000)
+        }
+    }
+</script>
+@@include('foot.html')

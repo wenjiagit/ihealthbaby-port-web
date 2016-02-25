@@ -1,0 +1,201 @@
+@import "variables.less";
+
+@page-bg-color: #fff;
+@height:35px;
+@border-radius:5px;
+.clean-css {
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: #EFEFF4;
+}
+//登录样式
+.login{
+   margin-top: -80px;
+   background-color:@page-bg-color ;
+  .login_bg{
+    background-color: #02CF97;
+    //height:400px;
+  }
+  .login_head{
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 999;
+    height: 301px;
+    background-size: auto 301px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: data-uri("../images/login_head.jpg");
+    margin-bottom: 30px;
+  }
+  .message_btn{
+    text-align: center;color:#02cf97;font-size: 18px;padding: 40px 0
+  }
+  .btn-log{
+    width: 92%;
+    background-color: #02d194;
+    height:55px;
+    line-height:55px;
+    border-radius: @border-radius;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 4%;
+    border: none;
+    margin-top:30px
+  }
+
+  .input-control{
+    width:92%;margin-left: 4%;
+    border: 1px solid #F0F0F0;
+    height: 55px;
+    font-size: 18px;
+    text-align: center;
+    color: #000;
+  }
+}
+
+//修改密码
+.change_password {
+  background-color: #F0F2F5;
+  border: 1px solid #CDCDCD;
+  color: #000;;
+  border-radius: 5px;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 168px;
+  font-size: 16px;
+}
+.exit_btn {
+  background-color: #F0F2F5;
+  border: 1px solid #CDCDCD;
+  color: #000;;
+  border-radius: 5px;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+//修改密码页
+.change_send_out,.change_send_out_miao{
+  color: #fff;
+  border: 1px solid #CDCDCD;
+  border-radius: 5px;
+  height: 55px;
+  line-height: 55px;
+  cursor: pointer;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+.change_send_out {
+  background-color: #02CF97;
+}
+.change_send_out_miao {
+  background-color: #f6f6f6;
+  color:#000;
+
+}
+.change_send_err {
+  color: #FE045D;
+  margin: 5px 0 -10px 4%;
+}
+
+//登录验证页
+.message_btn {
+  text-align: center;
+  color: #02cf97;
+  font-size: 18px;
+  padding: 40px 0;
+  cursor: pointer;
+}
+.send_out,.send_miao{
+  color: #fff;
+  border: 1px solid #CDCDCD;
+  border-radius: 5px;
+  height: 55px;
+  line-height: 55px;
+  cursor: pointer;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+.send_out {
+  background-color: #02CF97;
+}
+.send_miao {
+  background-color: #f6f6f6;
+  color:#000;
+}
+
+.send_err{
+  color:#FE045D;margin: 5px 0 -10px 0;
+}
+
+
+//登录页
+.txt_name_input {
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%
+}
+.txt_password {
+  margin-top: 5px;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%
+}
+
+.message_btn {
+  text-align: center;
+  color: #02cf97;
+  font-size: 18px;
+  padding: 40px 0
+}
+
+//修改密码成功页
+.success_bg{
+  background-color: #02CF97;width: 90px;height: 90px;border-radius: 100%;margin: 0 auto
+}
+.success_div{
+  text-align: center;margin-top:168px
+}
+.success_div .success_bg img{
+  margin:0 auto; width:50px;height: 40px;padding-top: 25px;
+}
+.success_div .success_alert{
+  margin-top: 30px;font-size: 16px;font-weight: bold
+}
+
+//详情页弹框效果
+ .custody_scroll{
+  height: 100%;overflow:scroll;
+}
+.img-modal-overlay {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: scroll;
+  cursor: pointer;
+}
+.img-modal-overlay .dal_div{
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}

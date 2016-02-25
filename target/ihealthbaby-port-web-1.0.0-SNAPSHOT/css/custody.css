@@ -1,0 +1,283 @@
+body
+{
+    background-color: #f7f4f3;
+}
+.header_bg
+{
+    font-size: 22px;
+    line-height: 53px;
+
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    height: 53px;
+
+    text-align: center;
+
+    color: #fff;
+    background-color: #02cf97;
+}
+.header_btn
+{
+    font-size: 17px;
+
+    position: fixed;
+    top: 17px;
+    right: 10px;
+
+    cursor: pointer;
+
+    color: #fff;
+}
+.custody_header
+{
+    font-size: 17px;
+
+    position: fixed;
+    z-index: 10;
+    top: 17px;
+    left: 10px;
+
+    cursor: pointer;
+
+    color: #fff;
+}
+@media (width: 768px)
+{
+    #block_width
+    {
+        height: 200px;
+    }
+}
+.bg_block
+{
+    width: 92.5%;
+    margin-top: 10px;
+    margin-left: 3.3%;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.bg_block #block_width
+{
+    height: 180px;
+}
+.bg_block .user_description
+{
+    font-size: 16px;
+
+    margin: 10px 0 0 15px;
+
+    color: #999;
+}
+.bg_block .user_reply
+{
+    font-size: 18px;
+
+    margin: 5px 0 0 15px;
+}
+.bg_block textarea
+{
+    width: 94%;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 2%;
+
+    border-radius: 5px;
+}
+.bg_block .title_bg
+{
+    height: 45px;
+
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+}
+.bg_block .noInterpretation_title
+{
+    font-size: 19px;
+
+    color: #000;
+}
+.bg_block .interpretation_title
+{
+    font-size: 18px;
+
+    color: #ef0b7d;
+}
+.bg_block .title_val
+{
+    font-size: 14px;
+
+    margin-left: 10px;
+
+    color: #98a1b3;
+}
+.bg_block .title_div
+{
+    line-height: 45px;
+
+    float: left;
+
+    margin-left: 10px;
+}
+.bg_block .interpretation_btn,
+.bg_block .convicted_btn
+{
+    font-size: 15px;
+    line-height: 34px;
+
+    float: right;
+
+    width: 72px;
+    height: 32px;
+    margin-top: 6px;
+    margin-right: 12px;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: #fff;
+    border-radius: 20px;
+}
+.bg_block .convicted_btn
+{
+    background-color: #999;
+}
+.bg_block .interpretation_btn
+{
+    background-color: #02cf97;
+}
+.bg_block .list_bg
+{
+    background-color: #fff;
+}
+.bg_block .list_content
+{
+    padding: 18px 1px 17px 12px;
+}
+.bg_block .interpersonal_time_title
+{
+    font-size: 13px;
+
+    color: #98a1b3;
+}
+.bg_block .interpersonal_time
+{
+    font-size: 22px;
+
+    position: relative;
+    top: 7px;
+
+    margin-left: 2px;
+
+    color: #000;
+}
+.bg_block .interpersonal_NST
+{
+    font-size: 18px;
+
+    float: right;
+
+    margin-top: -20px;
+    margin-right: 12px;
+
+    color: #01cf97;
+}
+.bg_block .interpretation_list
+{
+    margin-top: 0;
+    padding-right: 15px;
+
+    color: #98a1b3;
+}
+.bg_block .interpretation_start
+{
+    font-size: 13px;
+
+    margin-top: 25px;
+
+    text-align: left;
+}
+.bg_block .interpretation_zixun
+{
+    font-size: 13px;
+
+    margin-top: -18px;
+    margin-left: -8px;
+
+    text-align: center;
+}
+.bg_block .interpretation_huifu
+{
+    font-size: 13px;
+
+    margin-top: -18px;
+
+    text-align: right;
+}
+.issue_btn
+{
+    font-size: 20px;
+    line-height: 45px;
+
+    width: 50%;
+    height: 45px;
+    margin: 30px 0 30px 25%;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 20px;
+    background-color: #02cf97;
+}
+.not_issue_btn
+{
+    font-size: 20px;
+    line-height: 45px;
+
+    width: 50%;
+    height: 45px;
+    margin: 30px 0 30px 25%;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 20px;
+    background-color: #999;
+}
+#custody .custody_row
+{
+    font-size: 12px;
+    line-height: 38px;
+
+    height: 38px;
+
+    border-bottom: 1px solid #eee;
+}
+#custody .custody_list
+{
+    padding: 0 10px;
+}
+#custody .custody_title
+{
+    line-height: 30px;
+
+    height: 30px;
+
+    text-align: center;
+}
+#custody .custody_label
+{
+    float: left;
+
+    width: 56px;
+
+    color: #999;
+}
+#custody .custody_value
+{
+    float: left;
+
+    width: 77px;
+}

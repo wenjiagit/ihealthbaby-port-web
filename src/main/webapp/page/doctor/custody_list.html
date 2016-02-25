@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta name="renderer" content="webkit">
+    <meta name="Keywords" content="百度云手势事件库, touch, touch library, baidu cloud gesture event library, javascript, html5, transform, pinch, scale,tap"
+            />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>监护详情</title>
+    <link href="../../lib/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/doctor.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/custody.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/application.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/main.min.css" rel="stylesheet" type="text/css" />
+</head>
+<style type="text/css">
+    .custody_scroll{
+        height: 100%;overflow:scroll;
+    }
+    .img-modal-overlay {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        overflow: scroll;
+        cursor: pointer;
+    }
+    .img-modal-overlay .dal_div{
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: 30%;
+    }
+</style>
+<body>
+    <div class="custody_header">返回</div>
+    <div class="header_bg">监护详情</div>
+    <div  class="header_btn">拨打电话</div>
+    <div style="" class="custody_scroll">
+        <div id="custody" class="bg_block" style="margin-top:59px;border:1px solid #e8e8e8;">
+            <div style="background-color: #fff;">
+                <div class="custody_title">李李</div>
+                <div class="custody_row">
+                    <div class="custody_list">
+                        <div class="custody_label">年龄</div>
+                        <div class="custody_value">23</div>
+                    </div>
+                    <div class="custody_list" style="float:right;">
+                        <div class="custody_label">孕周</div>
+                        <div class="custody_value">孕1062周+3天</div>
+                    </div>
+                </div>
+                <div class="custody_row">
+                    <div class="custody_list">
+                        <div class="custody_label">监护号</div>
+                        <div class="custody_value">00118</div>
+                    </div>
+                    <div class="custody_list" style="float:right;">
+                        <div class="custody_label">监护时长</div>
+                        <div class="custody_value">0分钟</div>
+                    </div>
+                </div>
+                <div class="custody_row" style="border:0;">
+                    <div class="custody_list">
+                        <div class="custody_label">监护时间</div>
+                        <div class="custody_value">09-14 01:45</div>
+                    </div>
+                    <div class="custody_list" style="float:right;">
+                        <div class="custody_label">咨询时间</div>
+                        <div class="custody_value">09-14 09:46</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="clear: both"></div>
+        <div class="bg_block" style="background-color: #fff;border:1px solid #e8e8e8">
+            <img src="../images/login_head.jpg" style="width:100%;height: 135px;cursor: pointer" id="target" />
+        </div>
+        <div class="bg_block" style="height: 100px;background-color: #fff;border:1px solid #e8e8e8">
+            <p class="user_description">用户描述</p>
+            <p class="user_reply" style="font-size: 14px;">刘医生:我最近感觉胎动不是很正常，监测了很多次您看是否有问题?着急，谢谢！</p>
+        </div>
+        <div class="bg_block" style="height: 120px;background-color: #fff;border:1px solid #e8e8e8">
+            <p class="user_description" style="margin-bottom: 18px;font-size: 16px;">结果分析</p>
+            <div style="float: left;margin-left: 20px;font-size: 14px;">
+                <div><lable><input type="radio" value="radio1" name="v1">正常NST(-)</lable></div>
+                <div style="margin-top: 20px"><lable><input type="radio" value="radio1" name="v1">不典型NST(+-)</lable></div>
+            </div>
+            <div style="position: relative;right:20px;float: right;font-size: 14px;">
+                <div><lable><input type="radio" value="radio1" name="v1">异常NST(-)</lable></div>
+                <div style="margin-top: 20px"><lable><input type="radio" value="radio1" name="v1">NST无法判读</lable></div>
+            </div>
+        </div>
+        <div class="bg_block" style="height:150px;background-color: #fff;border:1px solid #e8e8e8">
+        <textarea>
+            您的判读回复
+        </textarea>
+        </div>
+        <div class="issue_btn">去签发报告</div>
+        <div class="not_issue_btn">已签发</div>
+    </div>
+<script src="../../page/js/jquery.min.js"></script>
+<script src="../../page/js/main.js"></script>
+<script type="text/javascript">
+
+     var data= [{"y":96,"t":0,"a":0},{"y":97,"t":0,"a":0},{"y":97,"t":0,"a":0},{"y":99,"t":0,"a":0},
+         {"y":99,"t":0,"a":0},{"y":102,"t":0,"a":0},{"y":102,"t":0,"a":0},{"y":101,"t":0,"a":0},
+         {"y":101,"t":0,"a":0},{"y":98,"t":0,"a":0},{"y":96,"t":0,"a":0},{"y":95,"t":0,"a":0},
+         {"y":96,"t":0,"a":0},{"y":94,"t":0,"a":0},{"y":95,"t":0,"a":0},{"y":95,"t":0,"a":0},
+         {"y":95,"t":0,"a":0},{"y":96,"t":0,"a":0},{"y":96,"t":0,"a":0},{"y":98,"t":0,"a":0},
+         {"y":98,"t":0,"a":0},{"y":100,"t":0,"a":0},{"y":100,"t":0,"a":0},{"y":101,"t":0,"a":0},
+         {"y":101,"t":0,"a":0},{"y":100,"t":0,"a":0},{"y":100,"t":0,"a":0},{"y":99,"t":0,"a":0},
+         {"y":99,"t":0,"a":0},{"y":100,"t":0,"a":0}, {"y":100,"t":0,"a":0},{"y":100,"t":0,"a":0},
+         {"y":100,"t":0,"a":0},{"y":97,"t":0,"a":0}];
+     var data_heart = []; // 心跳
+     var data_fetal=[];  //胎动
+     for(var i = 0;i<data.length;i++){
+         data_heart.push(data[i].y);
+         data_fetal.push(data[i].t);
+     }
+     function showReport(wrap){
+         wrap = wrap || $("#heartRate-wrapper-inner");
+         wrap.empty();
+         var xRulerN = 0;
+         var showSpan = 5 * 120;//显示补齐数，暂时5分钟补齐
+         var showCount = Math.max(
+                 20*120,
+                 Math.ceil(data_heart.length /showSpan ) * showSpan
+         );
+         var chartX=2;
+         var chartY=5;
+         wrap.heartRateGrid({
+             data:data_heart ,
+             fetal_data:data_fetal,
+             dataShowCount: showCount,
+             wrong: {
+                 start:'110',
+                 end: '160',
+                 lineColor: "green",
+                 lineWidth: 1,
+                 rectColor: "#9FD69C"
+             },
+             width:"190mm",
+             height: "60mm",
+             divY:chartY,
+             xRulerText:function(v,n){
+                 return (xRulerN++) + "'"
+             },
+             xRuler:120/chartX,//120
+             xRulerStyle:function(v,n){//0实线，1虚线
+                 return (v % 120 == 0) ? 0 : 1;
+             },
+             xRulerLine:function(v,n){
+                 return 1;
+             },
+             xRulerColor:function(v,n){
+                 return "#000";
+             },
+             xRulerDottedColor:function(v,n){
+                 return "#999";
+             },
+             fontSize: "12",
+             fontStyle: "italic",
+             fontName: '"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif',
+         });
+     }
+
+     $("#target").on('click', function() {
+         $(".custody_scroll").css({"overflow":"hidden","height":"auto"});
+         var bigImgWidth = 768;
+         $('body').css('overflow', 'hidden');
+         $('.img-modal-overlay').remove();
+         $('body').append('<div class="img-modal-overlay">' +
+                                 '<div class="dal_div" style="background-color: #fff;width:1150px ;padding:0 10px">'+
+                                     ' <div class="text-center clearfix" style="margin-top: -10px" id="heartRate-wrapper-inner"> </div>' +
+                                 '</div>' +
+                             '</div>');
+         var bigImg = $('.img-modal-overlay');
+         bigImg.css('width', bigImgWidth + 'px');
+         var bigImgHight = bigImg.height();
+         bigImg.css('margin-top', (-bigImgHight / 2) + 'px');
+         showReport();
+     });
+     $(document).on('click', '.img-modal-overlay', function() {
+         $('body').css('overflow', 'auto');
+         $(this).remove();
+     });
+     $(document).on('click', '.img-modal-overlay img', function() {
+         return false;
+     });
+     $(document).on('click', '.img-modal-overlay', function() {
+         $('.img-modal-overlay').remove();
+         return false;
+     });
+
+</script>
+</body>
+</html> 

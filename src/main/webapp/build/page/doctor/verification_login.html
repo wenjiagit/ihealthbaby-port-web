@@ -1,0 +1,40 @@
+@@include('doctorHead.html', {"title": "登录"})
+<body class="login" style="height: auto;margin-top: -80px">
+<div class="login_bg">
+    <div class="login_head"></div>
+</div>
+<input type="text" name="txtName" class="input-control" style="border-radius: 5px;margin-top: 10px; box-sizing: border-box;" value="赵田丽"/>
+<div style="padding: 0 4%;box-sizing:border-box;">
+    <div style="width: 60%;float: left;margin-top: 15px;">
+        <input type="text" class="input-control" style="width: 100%;margin: 0 auto;border-radius: 5px; text-align: left;padding-left: 15px; box-sizing: border-box;"  placeholder="输入验证码">
+    </div>
+    <div style="width: 30%;float: right;margin-top: 15px;">
+        <div class="send_out">发送验证码</div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+<div class="send_err">验证码错误</div>
+<a href="./order_list.html"><button class="btn-log">登录</button></a>
+<a href="./login.html">
+    <div class="message_btn">使用密码登录</div>
+</a>
+<script src="../../page/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(".send_out").click(function(){
+        verify_phone();
+    });
+    var wait=60;
+    function verify_phone(){
+        if (wait == 0) {
+            $(".send_out").removeClass('send_miao').removeAttr("disabled").html("重新发送");
+            wait = 60;
+        } else {
+            $(".send_out").addClass('send_miao').attr("disabled", true).html(wait + '秒后重新获取');
+            wait--;
+            setTimeout(function() {
+                verify_phone();
+            },1000)
+        }
+    }
+</script>
+@@include('foot.html')

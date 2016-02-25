@@ -1,0 +1,221 @@
+@import "variables.less";
+
+@font-size: 22px;
+@size: 16px;
+@text-center: center;
+@bg-color: #999;
+@page-bg-color: #fff;
+@height: 35px;
+//监护详情样式和订单列表样式
+body {
+  background-color: #F7F4F3;
+}
+
+.header_bg {
+  background-color: #02CF97;
+  width: 100%;
+  height: 53px;
+  text-align: @text-center;
+  line-height: 53px;
+  color: @page-bg-color;
+  font-size: @font-size;
+  position: fixed;
+  top: 0;
+}
+
+.header_btn {
+  position: fixed;
+  top: 17px;
+  right: 10px;
+  color: @page-bg-color;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.custody_header {
+  color: @page-bg-color;
+  position: fixed;
+  top: 17px;
+  left: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  z-index: 10
+}
+
+@media (width: 768px) {
+  #block_width {
+    height: 200px;
+
+  }
+}
+
+.bg_block {
+  #block_width {
+    height: 180px;
+  }
+  width: 92.5%;
+  margin-left: 3.3%;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+
+  .user_description {
+    margin: 10px 0 0 15px;
+    color: @bg-color;
+    font-size: @size;
+  }
+  .user_reply {
+    margin: 5px 0 0 15px;
+    font-size: 18px;
+  }
+  textarea {
+    width: 94%;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-left: 2%;
+    height: 100px
+  }
+
+  //订单列表样式
+
+  //订单列表样式
+  .title_bg {
+    background-color: #eeeeee;
+    height: 45px;
+    border-bottom: 1px solid #ccc
+  }
+  .noInterpretation_title {
+    font-size: 19px;
+    color: #000;
+  }
+  .interpretation_title {
+    font-size: 18px;
+    color: #EF0B7D;
+  }
+  .title_val {
+    margin-left: 10px;
+    color: #98A1B3;
+    font-size: 14px;
+  }
+  .title_div {
+    float: left;
+    line-height: 45px;
+    margin-left: 10px
+  }
+  .interpretation_btn, .convicted_btn {
+    float: right;
+    font-size: 15px;
+    width: 72px;
+    height: 32px;
+    text-align: @text-center;
+    line-height: 34px;
+    color: @page-bg-color;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 6px;
+    margin-right: 12px
+  }
+  .convicted_btn {
+    background-color: @bg-color;
+  }
+  .interpretation_btn {
+    background-color: #02CF97
+  }
+
+  .list_bg {
+    background-color: #fff;
+  }
+  .list_content {
+    padding: 18px 1px 17px 12px
+  }
+  .interpersonal_time_title {
+    color: #98A1B3;
+    font-size: 13px;
+  }
+  .interpersonal_time {
+    font-size: 22px;
+    margin-left: 2px;
+    position: relative;
+    top: 7px;
+    color: #000
+  }
+  .interpersonal_NST {
+    font-size: 18px;
+    margin-right: 12px;
+    margin-top: -20px;;
+    color: #01CF97;
+    float: right;
+  }
+  .interpretation_list {
+    margin-top: 0;
+    color: #98A1B3;
+    padding-right: 15px
+  }
+  .interpretation_start {
+    text-align: left;
+    font-size: 13px;
+    margin-top: 25px;
+  }
+  .interpretation_zixun {
+    text-align: center;
+    margin-top: -18px;
+    font-size: 13px;
+    margin-left: -8px
+  }
+  .interpretation_huifu {
+    text-align: right;
+    margin-top: -18px;
+    font-size: 13px;
+  }
+}
+
+.issue_btn {
+  background-color: #02CF97;
+  border-radius: 20px;
+  width: 50%;
+  height: 45px;
+  color: @page-bg-color;
+  text-align: @text-center;
+  line-height: 45px;
+  font-size: 20px;
+  margin: 30px 0 30px 25%;
+}
+
+.not_issue_btn {
+  background-color: #999;
+  border-radius: 20px;
+  width: 50%;
+  height: 45px;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+  margin: 30px 0 30px 25%
+}
+
+#custody {
+  .custody_row {
+    font-size: 12px;
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #eee;
+  }
+  .custody_list {
+    padding: 0 10px;
+  }
+  .custody_title {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .custody_label {
+    float: left;
+    width: 56px;
+    color: #999;
+  }
+  .custody_value {
+    float: left;
+    width: 77px;
+  }
+}
+

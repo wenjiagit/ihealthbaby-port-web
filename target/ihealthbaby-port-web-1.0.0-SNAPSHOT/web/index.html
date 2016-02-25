@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>微胎心-胎儿安全监护医生</title>
+<head>
+<script type="text/javascript" src="www/images/jquery.min.js"></script>
+<script type="text/javascript" src="www/images/jquery.devrama.slider.js"></script>
+<style>
+	body {font-size: 1em; color: #FFF; margin: 0; padding: 0}
+    .example-animation {
+        height:auto !important;
+        height:733px; /*假定最低高度是200px*/
+        min-height:733px;
+    }
+	.copyright_bottom{
+		text-align: center;
+		color:#808080;
+		font-size: 12px;
+		padding: 20px;
+	}
+	.copyright_all{
+		color:#3c8dbc;
+		font-weight: bold
+	}
+</style>
+</head>
+<body>
+<!-- 代码 开始 -->
+<div class="example-animation">
+	<div data-lazy-background="www/images/banner_1_null.jpg">
+		<div data-pos="['5%', '-140px', '5%', '10%']" data-duration="600" data-delay="500" data-effect="move">
+			<img class="myImg" data-lazy-src="www/images/logo_m.jpg" />
+		</div>
+		<div data-pos="['69%', '20%']" data-duration="600" data-delay="1000" data-effect="fadein">
+            <img class="myImg" data-lazy-src="www/images/banner_1_1.jpg" />
+        </div>
+	</div>
+	<div data-lazy-background="www/images/banner_2_null.jpg">
+		<h1 data-pos="['8%', '22%']" data-duration="1000" data-effect="fadein">
+			<img class="myImg" data-lazy-src="www/images/banner_2_1.jpg" />
+		</h1>
+		<div data-pos="['25%', '22%']" data-duration="700" data-effect="fadein">
+			<img class="myImg" data-lazy-src="www/images/banner_2_2.jpg" />
+		</div>
+		<div data-pos="['35%', '22%']" data-duration="700" data-effect="fadein">
+			<img class="myImg" data-lazy-src="www/images/banner_2_3.jpg" />
+		</div>
+	</div>	
+	<div data-lazy-background="www/images/banner_3_null.jpg">
+		<h1 data-pos="['10%', '120%', '10%', '60%']" data-duration="1000" data-effect="move">
+			<img class="myImg" data-lazy-src="www/images/banner_3_1.jpg" />
+		</h1>
+		<div data-pos="['26%', '120%', '26%', '60%']" data-duration="700" data-effect="move" >
+			<img class="myImg" data-lazy-src="www/images/banner_3_2.jpg" />
+		</div>
+		<div data-pos="['40%', '120%', '40%', '60%']" data-duration="700" data-effect="move">
+			<img class="myImg" data-lazy-src="www/images/banner_3_3.jpg" />
+		</div>
+	</div>	 
+	<div data-lazy-background="www/images/banner_4.jpg">
+		<div data-pos="['32%', '65%']" data-duration="700" data-effect="fadein">
+			<img class="myImg" data-lazy-src="www/images/banner_4_2.jpg" />
+		</div>
+		<div data-pos="['32%', '40%']" data-duration="700" data-effect="fadein">
+			<img class="myImg" data-lazy-src="www/images/banner_4_1.jpg" />
+		</div>
+		<div data-pos="['55%', '40%']" data-duration="800" data-effect="fadein">
+			<img class="myImg" data-lazy-src="www/images/banner_4_3.png" />
+		</div>
+    </div>	 
+	<div data-lazy-background="www/images/banner_5.jpg">
+	</div>
+</div>
+<script type="text/javascript">
+var imgBgWidth = 1403;
+$(document).ready(function(){
+	$('.example-animation').DrSlider(); //Yes! that's it
+    mainWidth = $('.example-animation').width();
+    $(".myImg").each(function(i,e){
+        $(this).css("width", (mainWidth/imgBgWidth)*100+'%');
+    });
+    
+    $(window).resize(function(){
+        mainWidth = $('.example-animation').width();
+        $(".myImg").each(function(i){
+            $(this).css("width", (mainWidth/imgBgWidth)*100+'%');
+        }); 
+     });
+});
+</script>
+<!-- 代码 结束 -->
+<div class="copyright_bottom">
+	<div>公司地址: 北京市海淀区上园村3号交大科技大厦2层201-1室</div>
+	<p>版权所有: <span class="copyright_all">北京春闱科技有有限公司</span> 京ICP备15016295号</p>
+	<span>服务热线: 400-007-6638</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+@import "variables.less";
+
+@page-bg-color: #EFEFF4;
+@page-list-color: #FFF;
+@page-line: solid 1px #E0E0E0;
+//段落缩进
+@page-section-text-indent: 2em;
+@page-font-color: #000;
+@page-list-font-color: #636363;
+
+.clean-css {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: @page-bg-color;
+}
+
+.dl-number {
+  dl {
+    counter-increment: dl-counter;
+  }
+  dt:before {
+    content: counter(dl-counter) ": ";
+  }
+}
+
+.list {
+  a {
+    @line-height: 48px;
+    @badge-height: 16.333px;
+    & {
+      display: block;
+      margin: 13px 0 0 0;
+      height: @line-height;
+      line-height: @line-height;
+      background-color: @page-list-color;
+      text-indent: 23px;
+      color: @page-list-font-color;
+      text-decoration: none;
+    }
+    .badge {
+      background-size: cover;
+      background-image: data-uri('images/gt.svg');
+      width: 9.6666px;
+      height: @badge-height;
+      margin: ((@line-height - @badge-height) / 2) 21.6666px ((@line-height - @badge-height) / 2) 0;
+      float: right;
+    }
+  }
+}
+
+article {
+  & {
+    padding: 15px;
+    color: @page-font-color;
+  }
+
+  p {
+    text-indent: @page-section-text-indent;
+  }
+
+  h1 {
+    font-family: @font-family-base;
+    font-weight: 700;
+
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    border-bottom: @page-line;
+    font-size: @font-size-base;
+  }
+
+  h1.center-title {
+    & {
+      font-size: @font-size-h4;
+      padding: 30px 0;
+      text-align: center;
+    }
+    small {
+      display: block;
+      font-size: @font-size-h5;
+    }
+  }
+
+  dl {
+    & {
+      margin: 0 0 10px 0;
+      padding: 0 0 10px 0;
+      border-bottom: @page-line;
+      font-size: @font-size-base;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    dt {
+      font-family: @font-family-base;
+      font-weight: 700;
+    }
+    dd {
+      & {
+        text-indent: @page-section-text-indent;
+        font-family: @font-family-serif;
+        padding: 5px 0;
+        margin: 0;
+      }
+
+      ol {
+        margin: 0;
+      }
+
+      li {
+        text-indent: 0;
+      }
+    }
+  }
+}
